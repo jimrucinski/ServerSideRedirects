@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Style\redirects.xsl" />
+    <Content Include="Style\Scss1.css">
+      <DependentUpon>Scss1.scss</DependentUpon>
+    </Content>
     <Content Include="Style\TableCss.css" />
     <Content Include="ViewRedirects.aspx" />
     <Content Include="Web.config" />
@@ -74,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="redirects.config" />
+    <Content Include="Style\Scss1.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

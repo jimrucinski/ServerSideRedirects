@@ -4,7 +4,8 @@
   <xsl:template match="/">
     <html>
       <head>
-        <meta name="viewport" content="width=device-width"></meta>   
+        <meta name="viewport" content="width=device-width"></meta>
+        <link href="./style/Scss1.css" rel="stylesheet" />
       </head>
       <body>
         <table>
@@ -19,11 +20,10 @@
           </tr>
           <xsl:for-each select="rules/rule" >
             <tr>
-              <xsl:attribute name="style">
-                <xsl:if test="./match/@url = '^(.*)'">
-                  <xsl:text>background-color:lime</xsl:text>
-                </xsl:if>
+              <xsl:attribute name="id">
+                <xsl:if test="./match/@url = '^(.*)'"><xsl:text>highlight</xsl:text></xsl:if>
               </xsl:attribute>
+              
               <td>
                 <xsl:value-of select="@name"/>
               </td>
