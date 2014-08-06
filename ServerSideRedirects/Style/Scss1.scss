@@ -37,6 +37,9 @@ td {
 	margin-top:2px;
 	box-shadow:none;
 	background-color:darken($backColor,10%);
+	border-style:ridge;
+	border-width:2px;
+	border-color:lighten($backColor,10%);
 }
 .boxStyle{
 	float:left;
@@ -46,6 +49,8 @@ td {
 	border-color:#000000;
 	border-width:1px;
 	margin-right:10px;
+	font-size: 2*$baseFontSize;
+	letter-spacing: $baseFontSize;
 }
 #one
 {	
@@ -62,5 +67,5 @@ td {
 {
 	@include createBox(maroon);
 	&:active{@include clickBox(maroon);}
-	color:#ffffff;
+	color:yellow;
 }

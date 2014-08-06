@@ -26,7 +26,9 @@ td {
   border-style: solid;
   border-color: #000000;
   border-width: 1px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  font-size: 2em;
+  letter-spacing: 1em; }
 
 #one {
   background-color: cornflowerblue;
@@ -34,7 +36,10 @@ td {
   #one:active {
     margin-top: 2px;
     box-shadow: none;
-    background-color: #3676e8; }
+    background-color: #3676e8;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: #92b4f2; }
 
 #two {
   background-color: lime;
@@ -42,14 +47,20 @@ td {
   #two:active {
     margin-top: 2px;
     box-shadow: none;
-    background-color: #00cc00; }
+    background-color: #00cc00;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: #33ff33; }
 
 #three {
   background-color: maroon;
   box-shadow: 4px 4px 4px #5c0000;
-  color: #ffffff; }
+  color: yellow; }
   #three:active {
     margin-top: 2px;
     box-shadow: none;
-    background-color: #4d0000; }
+    background-color: #4d0000;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: #b30000; }
 
