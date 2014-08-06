@@ -1,0 +1,5 @@
+C:\Projects\ServerSideRedirects\ServerSideRedirects\bin\ServerSideRedirects.dll
+C:\Projects\ServerSideRedirects\ServerSideRedirects\bin\ServerSideRedirects.pdb
+C:\Projects\ServerSideRedirects\ServerSideRedirects\obj\Debug\ServerSideRedirects.dll
+C:\Projects\ServerSideRedirects\ServerSideRedirects\obj\Debug\ServerSideRedirects.pdb
+C:\Projects\ServerSideRedirects\ServerSideRedirects\obj\Debug\ServerSideRedirects.csprojResolveAssemblyReference.cache
