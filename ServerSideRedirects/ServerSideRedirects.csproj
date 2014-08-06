@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SASSTesting.aspx" />
     <Content Include="Style\redirects.xsl" />
     <Content Include="Style\Scss1.css">
       <DependentUpon>Scss1.scss</DependentUpon>
@@ -67,6 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SASSTesting.aspx.cs">
+      <DependentUpon>SASSTesting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SASSTesting.aspx.designer.cs">
+      <DependentUpon>SASSTesting.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewRedirects.aspx.cs">
       <DependentUpon>ViewRedirects.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

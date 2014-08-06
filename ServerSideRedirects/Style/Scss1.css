@@ -19,3 +19,37 @@ td {
 #highlight {
   background-color: yellow; }
 
+.boxStyle, #one, #two, #three {
+  float: left;
+  width: 30%;
+  height: 40px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  margin-right: 10px; }
+
+#one {
+  background-color: cornflowerblue;
+  box-shadow: 4px 4px 4px #447fe9; }
+  #one:active {
+    margin-top: 2px;
+    box-shadow: none;
+    background-color: #3676e8; }
+
+#two {
+  background-color: lime;
+  box-shadow: 4px 4px 4px #00db00; }
+  #two:active {
+    margin-top: 2px;
+    box-shadow: none;
+    background-color: #00cc00; }
+
+#three {
+  background-color: maroon;
+  box-shadow: 4px 4px 4px #5c0000;
+  color: #ffffff; }
+  #three:active {
+    margin-top: 2px;
+    box-shadow: none;
+    background-color: #4d0000; }
+

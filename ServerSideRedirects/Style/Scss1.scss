@@ -27,3 +27,40 @@ td {
 #highlight {
     background-color:$highLightColor;
 }
+//playing around with SASS stuff 
+@mixin createBox($backColor){
+	@extend .boxStyle;//use the class boxStyle for common properties
+	background-color:$backColor;
+	box-shadow:4px 4px 4px darken($backColor,7%); //call the SASS darken function to drop a shadow of appropriate color
+}
+@mixin clickBox($backColor){
+	margin-top:2px;
+	box-shadow:none;
+	background-color:darken($backColor,10%);
+}
+.boxStyle{
+	float:left;
+	width:30%;
+	height:40px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;
+	margin-right:10px;
+}
+#one
+{	
+	@include createBox(#6495ED);
+	&:active{@include clickBox(#6495ED);}
+}
+
+#two
+{
+	@include createBox(lime);
+	&:active{@include clickBox(lime);}
+}
+#three
+{
+	@include createBox(maroon);
+	&:active{@include clickBox(maroon);}
+	color:#ffffff;
+}
