@@ -1,5 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:ClassNameHere="dummy namespace here">
+  <msxsl:script language="C#" implements-prefix="ClassNameHere">
+
+    <![CDATA[
+
+
+        public string MethodName(/* some parameters here*/)
+
+        {
+
+              using(var client = new MyClient()) {
+                client.HeadOnly = true;
+                // fine, no content downloaded
+                try{
+                string s1 = client.DownloadString("http:///google.com");
+                }
+                catch(Exception ex)
+                {
+                    
+                }
+                // throws 404
+                try{
+                string s2 = client.DownloadString("http:///google.com/silly");
+                }
+                catch(Exception ex)
+                {
+                    //return "error";
+                }
+                return "ok";
+            }
+        }
+ class MyClient : System.Net.WebClient
+    {
+        public bool HeadOnly { get; set; }
+        protected override System.Net.WebRequest GetWebRequest(Uri address)
+        {
+            System.Net.WebRequest req = base.GetWebRequest(address);
+            if (HeadOnly && req.Method == "GET")
+            {
+                req.Method = "HEAD";
+            }
+            return req;
+        }
+        }
+
+    ]]>
+
+  </msxsl:script>
+  
   <xsl:output method="html" indent="yes"/>
   <xsl:template match="/">
     <html>
@@ -23,7 +72,9 @@
               <xsl:attribute name="id">
                 <xsl:if test="./match/@url = '^(.*)'"><xsl:text>highlight</xsl:text></xsl:if>
               </xsl:attribute>
-              
+              <td>
+                <xsl:value-of select="ClassNameHere:MethodName()"/>
+              </td>
               <td>
                 <xsl:value-of select="@name"/>
               </td>
